@@ -1,7 +1,7 @@
 
   # Criar design personalizado
 
-  The original project is available at aeraclou.com.br
+  The original project is available at aeracloud.com.br
 
   ## Running the code
 
