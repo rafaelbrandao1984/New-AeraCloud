@@ -3,7 +3,18 @@ import { Footer } from "./components/Footer";
 import { GlowCard } from "./components/GlowCard";
 import { motion } from "motion/react";
 import pilaresImage from "../assets/pilares.png";
-import { email, industries, plans, services, stats, values, whatsappUrl } from "./content";
+import {
+  company,
+  email,
+  industries,
+  plans,
+  serviceCommitments,
+  services,
+  supportProcess,
+  trustPillars,
+  values,
+  whatsappUrl,
+} from "./content";
 
 const diagnosticUrl = `${whatsappUrl}?text=Ol%C3%A1!%20Quero%20agendar%20meu%20diagn%C3%B3stico%20gratuito%20de%2015%20minutos.`;
 
@@ -23,10 +34,10 @@ export default function App() {
               Aera Cloud
             </span>
             <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
-              Infraestrutura resiliente e automação inteligente para sua operação em nuvem.
+              Suporte de TI para escritórios que não podem parar.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-3xl leading-relaxed">
-              A Aera Cloud entrega observabilidade, SRE e gestão de nuvem com foco em disponibilidade, governança e redução de custos.
+              Suporte técnico, monitoramento 24h e análise de cloud para advocacia, contabilidade, clínicas e pequenas empresas — com contrato claro e atendimento humano.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -96,7 +107,7 @@ export default function App() {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Serviços</span>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight">O que entregamos para operações maduras em nuvem</h2>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight">Suporte técnico pensado para a rotina do seu escritório</h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -114,9 +125,9 @@ export default function App() {
         <div className="container mx-auto max-w-6xl grid gap-16 lg:grid-cols-[1fr_0.9fr] items-center">
           <div>
             <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Quem somos</span>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight">Aera Cloud integra tecnologia e negócio.</h2>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight">Quem cuida da sua TI precisa ser confiável.</h2>
             <p className="mt-6 text-gray-400 max-w-xl leading-relaxed">
-              Nós projetamos e entregamos ambientes cloud prontos para crescer, com controle de custos, segurança e governança desde o primeiro deploy.
+              A Aera Cloud atua como parceira de suporte — não só quando algo quebra, mas com monitoramento e manutenção para reduzir riscos no dia a dia.
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -132,14 +143,14 @@ export default function App() {
           <GlowCard className="p-8 bg-gradient-to-br from-emerald-500/10 to-cyan-500/5 border border-gray-800">
             <div className="space-y-4">
               <p className="text-emerald-300 uppercase tracking-[0.35em] text-sm font-semibold">Visão</p>
-              <h3 className="text-3xl font-bold">Nuvem resiliente com resultado mensurável.</h3>
+              <h3 className="text-3xl font-bold">Tranquilidade para focar no seu negócio.</h3>
               <p className="text-gray-400 leading-relaxed">
-                A Aera Cloud cria jornadas de infraestrutura que equilibram performance, custo e segurança usando práticas modernas de DevOps e SRE.
+                Você atende clientes e pacientes; nós cuidamos de site, e-mail, backups e incidentes de TI com processo transparente.
               </p>
               <ul className="space-y-3 text-gray-300">
-                <li>• Observabilidade e confiabilidade como serviço</li>
-                <li>• Entrega de infraestrutura como código</li>
-                <li>• Operações seguras e auditáveis</li>
+                <li>• Atendimento por pessoa, não só por ticket automático</li>
+                <li>• Escopo e investimento definidos antes de começar</li>
+                <li>• Análise e otimização de ambientes em Azure e Google Cloud</li>
               </ul>
             </div>
           </GlowCard>
@@ -163,6 +174,80 @@ export default function App() {
               </GlowCard>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-gray-950/40 border-t border-gray-800" id="trust">
+        <motion.div
+          className="container mx-auto max-w-6xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.div
+            className="mb-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Por que confiar</span>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight">Suporte e cloud com processo transparente</h2>
+            <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+              Monitoramento, análise de infraestrutura e atendimento direto — para sua operação seguir sem surpresas.
+            </p>
+          </motion.div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {trustPillars.map((pillar) => (
+              <GlowCard key={pillar.title} className="p-8 bg-gray-900/60 border-gray-800">
+                <pillar.icon className="mb-4 h-10 w-10 text-emerald-400" aria-hidden="true" />
+                <h3 className="text-xl font-semibold text-white mb-3">{pillar.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{pillar.description}</p>
+              </GlowCard>
+            ))}
+          </div>
+
+          {company.cnpj && (
+            <p className="mt-10 text-center text-sm text-gray-500">
+              {company.legalName} · CNPJ {company.cnpj} · {company.city}
+            </p>
+          )}
+        </motion.div>
+      </section>
+
+      <section className="py-20 px-6 border-t border-gray-800" id="process">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            className="mb-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Como funciona</span>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight">Do primeiro contato ao suporte no dia a dia</h2>
+            <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+              Processo simples e transparente — você sabe o que esperar em cada etapa.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            {supportProcess.map((step) => (
+              <div key={step.step} className="relative rounded-3xl border border-gray-800 bg-gray-900/50 p-8">
+                <span className="text-3xl font-bold text-emerald-500/30">{step.step}</span>
+                <h3 className="mt-4 text-xl font-semibold text-white">{step.title}</h3>
+                <p className="mt-3 text-sm text-gray-400 leading-relaxed">{step.description}</p>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
@@ -216,19 +301,28 @@ export default function App() {
         </div>
       </section>
 
-      <section className="py-20 px-6 border-t border-gray-800">
+      <section className="py-20 px-6 border-t border-gray-800" id="commitments">
         <div className="container mx-auto max-w-5xl">
+          <div className="mb-12 text-center">
+            <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">O que você pode esperar</span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight">Compromissos do plano de suporte</h2>
+            <p className="mt-3 text-gray-400 text-sm max-w-xl mx-auto">
+              Prazos e escopo documentados no contrato — sem promessas vagas.
+            </p>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {serviceCommitments.map((item, index) => (
               <motion.div
-                key={stat.label}
+                key={item.label}
                 className="text-center"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
               >
-                <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">{stat.value}</div>
-                <div className="text-gray-400 uppercase tracking-wider text-xs font-semibold">{stat.label}</div>
+                <item.icon className="mx-auto mb-3 h-8 w-8 text-emerald-400" aria-hidden="true" />
+                <div className="text-2xl md:text-3xl font-bold text-emerald-400 mb-1">{item.value}</div>
+                <div className="text-gray-400 uppercase tracking-wider text-xs font-semibold">{item.label}</div>
               </motion.div>
             ))}
           </div>
@@ -241,7 +335,7 @@ export default function App() {
           <h2 className="mt-4 text-4xl font-bold tracking-tight">Você não compra apenas suporte.</h2>
           <h2 className="text-4xl font-bold tracking-tight text-emerald-400">Compra continuidade operacional.</h2>
           <p className="mt-6 text-gray-400 leading-relaxed max-w-2xl mx-auto">
-            Sua empresa online, segura e sem dor de cabeça com TI. Aera Cloud une execução técnica e visão de negócio para entregar estabilidade, segurança e evolução em Azure e Google Cloud.
+            Sua empresa online, segura e sem dor de cabeça com TI. Fale conosco pelo WhatsApp ou e-mail — respondemos em horário comercial.
           </p>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2">

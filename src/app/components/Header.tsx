@@ -6,7 +6,8 @@ import logoAera from "../../assets/logo.png";
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Serviços", href: "#services" },
-  { label: "Sobre", href: "#about" },
+  { label: "Como funciona", href: "#process" },
+  { label: "Planos", href: "#pricing" },
   { label: "Contato", href: "#contact" },
 ];
 
@@ -38,7 +39,7 @@ export function Header() {
               Aera<span className="text-emerald-400">Cloud</span>
             </p>
             <p className="mt-1.5 hidden text-[10px] font-medium uppercase tracking-[0.15em] text-slate-400 sm:block">
-              Infraestrutura & Cloud
+              Suporte de TI
             </p>
           </div>
         </motion.a>

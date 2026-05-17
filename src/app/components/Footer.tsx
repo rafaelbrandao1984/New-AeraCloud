@@ -1,5 +1,5 @@
 import { Mail, MapPin, MessageCircle } from "lucide-react";
-import { email, services, whatsappUrl } from "../content";
+import { company, email, services, whatsappUrl } from "../content";
 
 export function Footer() {
   return (
@@ -9,8 +9,15 @@ export function Footer() {
           <div>
             <h3 className="text-lg mb-4 text-white">AERA<span className="text-emerald-400">CLOUD</span></h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Suporte técnico gerenciado, monitoramento 24/7 e operação em nuvem para empresas que não podem parar.
+              Suporte técnico para advocacia, contabilidade, clínicas e pequenas empresas em Brasília e todo o Brasil.
             </p>
+            {company.cnpj && (
+              <p className="mt-3 text-xs text-gray-500">
+                {company.legalName}
+                <br />
+                CNPJ {company.cnpj}
+              </p>
+            )}
           </div>
 
           <div>
@@ -19,7 +26,8 @@ export function Footer() {
               <li><a href="#home" className="hover:text-emerald-400 transition">Início</a></li>
               <li><a href="#services" className="hover:text-emerald-400 transition">O que fazemos</a></li>
               <li><a href="#industries" className="hover:text-emerald-400 transition">Áreas de Atuação</a></li>
-              <li><a href="#about" className="hover:text-emerald-400 transition">Nossa Experiência</a></li>
+              <li><a href="#process" className="hover:text-emerald-400 transition">Como funciona</a></li>
+              <li><a href="#pricing" className="hover:text-emerald-400 transition">Planos</a></li>
             </ul>
           </div>
 
@@ -45,7 +53,7 @@ export function Footer() {
               </p>
               <p className="flex items-center gap-2 text-gray-400">
                 <MapPin className="h-4 w-4 shrink-0" />
-                <span>Brasília, DF – Brasil</span>
+                <span>{company.city}</span>
               </p>
             </div>
           </div>
