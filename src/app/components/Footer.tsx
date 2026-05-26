@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             <h3 className="text-lg mb-4 text-white">AERA<span className="text-emerald-400">CLOUD</span></h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Suporte técnico para advocacia, contabilidade, clínicas e pequenas empresas em Brasília e todo o Brasil.
+              Suporte técnico para advocacia, contabilidade, clínicas e PMEs em Brasília.
             </p>
             {company.cnpj && (
               <p className="mt-3 text-xs text-gray-500">
