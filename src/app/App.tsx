@@ -16,7 +16,9 @@ import {
   whatsappUrl,
 } from "./content";
 
-const diagnosticUrl = `${whatsappUrl}?text=Ol%C3%A1!%20Quero%20agendar%20meu%20diagn%C3%B3stico%20gratuito%20de%2015%20minutos.`;
+const diagnosticUrl = `${whatsappUrl}?text=${encodeURIComponent(
+  "Olá! Quero agendar meu diagnóstico gratuito de Presença Digital e Infraestrutura (15 min).",
+)}`;
 
 export default function App() {
   return (
@@ -34,10 +36,10 @@ export default function App() {
               Aera Cloud
             </span>
             <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
-              Suporte de TI para escritórios que não podem parar.
+              Construímos sua presença digital. Garantimos sua estrutura.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-3xl leading-relaxed">
-              Suporte técnico, monitoramento 24h e análise de cloud para advocacia, contabilidade, clínicas e pequenas empresas — com contrato claro e atendimento humano.
+              Sites profissionais de alta conversão, posicionamento no Google Empresas, mensuração com Analytics e Tag Manager, e infraestrutura segura em nuvem — para advocacia, contabilidade, clínicas e empresas que precisam ser encontradas e nunca ficar offline.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -67,7 +69,7 @@ export default function App() {
             <GlowCard className="overflow-hidden border border-gray-800">
               <img
                 src={pilaresImage}
-                alt="Pilares da Aera Cloud"
+                alt="Presença digital, performance e infraestrutura — Aera Cloud"
                 width="1536"
                 height="1024"
                 fetchPriority="high"
@@ -86,10 +88,10 @@ export default function App() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Diagnóstico inicial gratuito em 15 minutos
+              Diagnóstico de Presença Digital e Infraestrutura
             </h2>
             <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-              Mapeamos os principais riscos da sua operação de TI e mostramos prioridades práticas para melhorar estabilidade, segurança e desempenho.
+              Em 15 minutos mapeamos se o seu site está lento ou invisível, se o Google Empresas está otimizado para atrair clientes locais e se sua nuvem está segura — com prioridades claras para crescer com estabilidade.
             </p>
             <a
               href={diagnosticUrl}
@@ -97,7 +99,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-8 py-4 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400"
             >
-              Quero meu diagnóstico
+              Quero meu diagnóstico digital
             </a>
           </motion.div>
         </div>
@@ -107,7 +109,12 @@ export default function App() {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Serviços</span>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight">Suporte técnico pensado para a rotina do seu escritório</h2>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight">
+              Presença digital, performance e infraestrutura — na ordem certa
+            </h2>
+            <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+              Do site que converte à nuvem que sustenta sua operação, com mensuração e visibilidade local no meio do caminho.
+            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -125,9 +132,11 @@ export default function App() {
         <div className="container mx-auto max-w-6xl grid gap-16 lg:grid-cols-[1fr_0.9fr] items-center">
           <div>
             <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Quem somos</span>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight">Quem cuida da sua TI precisa ser confiável.</h2>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight">
+              Sua empresa na internet do jeito certo — e sempre no ar.
+            </h2>
             <p className="mt-6 text-gray-400 max-w-xl leading-relaxed">
-              A Aera Cloud atua como parceira de suporte — não só quando algo quebra, mas com monitoramento e manutenção para reduzir riscos no dia a dia.
+              A Aera Cloud é parceira de crescimento digital: colocamos seu escritório ou clínica no mapa online com site, Google e dados mensuráveis, e garantimos a infraestrutura para que você nunca perca um cliente por indisponibilidade.
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -143,14 +152,14 @@ export default function App() {
           <GlowCard className="p-8 bg-gradient-to-br from-emerald-500/10 to-cyan-500/5 border border-gray-800">
             <div className="space-y-4">
               <p className="text-emerald-300 uppercase tracking-[0.35em] text-sm font-semibold">Visão</p>
-              <h3 className="text-3xl font-bold">Tranquilidade para focar no seu negócio.</h3>
+              <h3 className="text-3xl font-bold">Crescer online com base sólida.</h3>
               <p className="text-gray-400 leading-relaxed">
-                Você atende clientes e pacientes; nós cuidamos de site, e-mail, backups e incidentes de TI com processo transparente.
+                Você foca em atender clientes e pacientes; nós entregam site, visibilidade local, analytics e a estrutura em nuvem que sustenta tudo isso — com processo transparente do primeiro briefing à operação contínua.
               </p>
               <ul className="space-y-3 text-gray-300">
-                <li>• Atendimento por pessoa, não só por ticket automático</li>
-                <li>• Escopo e investimento definidos antes de começar</li>
-                <li>• Análise e otimização de ambientes em Azure e Google Cloud</li>
+                <li>• Desenvolvimento moderno e otimizado para SEO</li>
+                <li>• Decisões baseadas em dados com Google Analytics</li>
+                <li>• Infraestrutura robusta em Azure e Google Cloud</li>
               </ul>
             </div>
           </GlowCard>
@@ -160,9 +169,15 @@ export default function App() {
       <section className="py-20 px-6 border-t border-gray-800" id="industries">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Ideal para empresas que dependem de tecnologia</span>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight">Cada minuto offline custa atendimento, faturamento e reputação</h2>
-            <p className="mt-4 text-gray-400 max-w-2xl mx-auto">Veja como adaptamos a operação para sua realidade.</p>
+            <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">
+              Ideal para quem depende de ser encontrado
+            </span>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight">
+              Site lento ou invisível no Google custa clientes todos os dias
+            </h2>
+            <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+              Quem não aparece na busca local ou perde o visitante em segundos perde faturamento e reputação — adaptamos site, Google Empresas e infraestrutura ao seu segmento.
+            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -193,9 +208,11 @@ export default function App() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Por que confiar</span>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight">Suporte e cloud com processo transparente</h2>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight">
+              Performance, visibilidade e estrutura com processo claro
+            </h2>
             <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-              Monitoramento, análise de infraestrutura e atendimento direto — para sua operação seguir sem surpresas.
+              Não prometemos apenas “estar no ar” — entregamos site rápido, presença local otimizada, dados confiáveis e nuvem segura, com escopo e investimento definidos antes de começar.
             </p>
           </motion.div>
 
@@ -227,9 +244,11 @@ export default function App() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Como funciona</span>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight">Do primeiro contato ao suporte no dia a dia</h2>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight">
+              Do diagnóstico ao site no ar e à sustentação contínua
+            </h2>
             <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-              Processo simples e transparente — você sabe o que esperar em cada etapa.
+              Processo simples e transparente — você sabe o que esperar em cada etapa do projeto e da operação.
             </p>
           </motion.div>
 
@@ -254,9 +273,15 @@ export default function App() {
       <section className="py-20 px-6 bg-gray-950/40 border-t border-gray-800" id="pricing">
         <div className="container mx-auto max-w-5xl">
           <div className="mb-12 text-center">
-            <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Investimento em tranquilidade</span>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight">Planos sob medida para manter seu negócio funcionando</h2>
-            <p className="mt-4 text-gray-400">Sem interrupções. Sem surpresas.</p>
+            <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">
+              Investimento em crescimento digital
+            </span>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight">
+              Planos que unem projeto de site e sustentação da sua operação
+            </h2>
+            <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+              Implantação com escopo fechado e mensalidade para manter performance, visibilidade e infraestrutura — sem surpresas.
+            </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 max-w-3xl mx-auto">
@@ -272,11 +297,15 @@ export default function App() {
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-emerald-400">R$ {plan.price}</span>
                     <span className="text-gray-400">/mês</span>
+                    <p className="mt-2 text-sm text-gray-500">Sustentação após implantação do site e integrações</p>
                   </div>
                 )}
                 {plan.price === "custom" && (
                   <div className="mb-6">
-                    <p className="text-gray-400">Consultoria mensal personalizada</p>
+                    <p className="text-gray-300 font-medium">Projetos sob medida e migração para Nuvem</p>
+                    <p className="mt-2 text-sm text-gray-500">
+                      Site institucional ou landing, Google Empresas, GA4/GTM e gestão inicial em GCP ou Azure
+                    </p>
                   </div>
                 )}
                 <ul className="space-y-3 mb-8">
@@ -293,7 +322,7 @@ export default function App() {
                   rel="noopener noreferrer"
                   className="block w-full rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold py-3 text-center transition"
                 >
-                  {plan.price === "custom" ? "Solicitar Proposta" : "Começar Agora"}
+                  {plan.price === "custom" ? "Solicitar proposta" : "Começar agora"}
                 </a>
               </GlowCard>
             ))}
@@ -305,9 +334,9 @@ export default function App() {
         <div className="container mx-auto max-w-5xl">
           <div className="mb-12 text-center">
             <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">O que você pode esperar</span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight">Compromissos do plano de suporte</h2>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight">Compromissos da operação digital</h2>
             <p className="mt-3 text-gray-400 text-sm max-w-xl mx-auto">
-              Prazos e escopo documentados no contrato — sem promessas vagas.
+              Prazos de entrega, métricas e escopo documentados no contrato — do lançamento do site à sustentação em nuvem.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -331,11 +360,13 @@ export default function App() {
 
       <section className="py-24 px-6 bg-gray-950/40" id="contact">
         <div className="container mx-auto max-w-4xl text-center">
-          <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Continuidade operacional</span>
-          <h2 className="mt-4 text-4xl font-bold tracking-tight">Você não compra apenas suporte.</h2>
-          <h2 className="text-4xl font-bold tracking-tight text-emerald-400">Compra continuidade operacional.</h2>
+          <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Presença digital completa</span>
+          <h2 className="mt-4 text-4xl font-bold tracking-tight">Você não compra apenas um site.</h2>
+          <h2 className="text-4xl font-bold tracking-tight text-emerald-400">
+            Compra visibilidade, dados e estrutura que não param.
+          </h2>
           <p className="mt-6 text-gray-400 leading-relaxed max-w-2xl mx-auto">
-            Sua empresa online, segura e sem dor de cabeça com TI. Fale conosco pelo WhatsApp ou e-mail — respondemos em horário comercial.
+            Site rápido, Google Empresas otimizado, analytics configurado e nuvem segura — fale conosco pelo WhatsApp ou e-mail. Respondemos em horário comercial.
           </p>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2">

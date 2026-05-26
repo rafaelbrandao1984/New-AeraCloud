@@ -28,6 +28,11 @@ export function Footer() {
               <li><a href="#industries" className="hover:text-emerald-400 transition">Áreas de Atuação</a></li>
               <li><a href="#process" className="hover:text-emerald-400 transition">Como funciona</a></li>
               <li><a href="#pricing" className="hover:text-emerald-400 transition">Planos</a></li>
+              <li>
+                <a href="/politica-de-privacidade" className="hover:text-emerald-400 transition">
+                  Política de Privacidade
+                </a>
+              </li>
             </ul>
           </div>
 

@@ -1,4 +1,5 @@
 import {
+  BarChart3,
   Building2,
   Calculator,
   Clock,
@@ -7,42 +8,43 @@ import {
   FileCheck,
   Headphones,
   HeartPulse,
-  Lock,
   Scale,
   ShieldCheck,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 
 export const whatsappUrl = "https://wa.me/5561992513658";
 export const email = "rafael.brandao@aeracloud.com.br";
 
-/** Preencha quando tiver CNPJ ativo — aparece no rodapé e na seção de confiança */
+/** Dados legais da empresa — aparecem no rodapé e na seção de confiança */
 export const company = {
   legalName: "AeraCloud Soluções em Tecnologia",
-  cnpj: "",
+  cnpj: "66.099.397/0001-29",
+  representative: "Rafael Brandão",
   city: "Brasília, DF – Brasil",
 };
 
 export const services = [
   {
-    title: "Suporte técnico gerenciado",
+    title: "Sites Profissionais & Landing Pages",
     description:
-      "Atendimento humano para resolver incidentes, dúvidas e solicitações do dia a dia — sem fila infinita nem robô genérico.",
+      "Páginas rápidas, otimizadas para SEO e pensadas para conversão — layout moderno, mobile-first e foco em transformar visitas em leads qualificados.",
   },
   {
-    title: "Monitoramento e alertas",
+    title: "Google Meu Negócio & SEO Local",
     description:
-      "Acompanhamento contínuo de site, e-mail e serviços críticos, com aviso antes que o cliente perceba a falha.",
+      "Configuração e otimização do perfil no Google para colocar seu escritório no mapa, aparecer nas buscas locais e atrair clientes da sua região.",
   },
   {
-    title: "Backup e recuperação",
+    title: "Análise de Dados (GA4 & GTM)",
     description:
-      "Rotinas automáticas de backup e orientação para restauração quando algo sai do esperado.",
+      "Integração de Google Analytics 4 e Tag Manager para mensurar leads, comportamento de usuários e o retorno real das suas ações digitais.",
   },
   {
-    title: "Análise e gestão de cloud",
+    title: "Sustentação, Suporte & Cloud",
     description:
-      "Diagnóstico de ambientes Azure e GCP, revisão de custos, performance e arquitetura com recomendações práticas.",
+      "Gerenciamento e monitoramento em GCP e Azure, e-mails corporativos, backups e segurança — suporte proativo para sua operação não parar.",
   },
 ];
 
@@ -69,25 +71,25 @@ export const industries = [
     icon: Scale,
     title: "Advocacia",
     description:
-      "Site, e-mail e sistemas jurídicos monitorados para manter a operação disponível quando o escritório mais precisa.",
+      "Site institucional rápido, perfil no Google otimizado e analytics para captar consultas — sem perder cliente por página lenta ou invisível.",
   },
   {
     icon: Calculator,
     title: "Contabilidade",
     description:
-      "Backups automáticos, monitoramento e suporte reforçado em períodos de fechamento e entrega de obrigações.",
+      "Presença local forte na temporada de obrigações, landing para serviços e estrutura estável quando o volume de acessos sobe.",
   },
   {
     icon: HeartPulse,
     title: "Clínicas",
     description:
-      "Agenda, prontuário e sistemas de atendimento com monitoramento para evitar paradas no horário de consultas.",
+      "Agendamento online, Google Empresas e site performático para quem busca especialidade na região — antes do concorrente aparecer.",
   },
   {
     icon: Building2,
     title: "Empresas",
     description:
-      "Infraestrutura estável para quem depende de e-mail, site e sistemas internos no dia a dia.",
+      "Marca encontrável, dados de campanha confiáveis e nuvem segura para quem não pode depender de site amador ou fora do ar.",
   },
 ];
 
@@ -99,88 +101,89 @@ export type TrustPillar = {
 
 export const trustPillars: TrustPillar[] = [
   {
-    icon: Cloud,
-    title: "Análise de cloud",
+    icon: Zap,
+    title: "Metodologia Ágil",
     description:
-      "Revisão de ambientes Azure e GCP: custos, performance e arquitetura, com plano de ação claro para evoluir a infraestrutura.",
+      "Entregas por etapas, feedback rápido e ajustes contínuos — do briefing ao site no ar sem meses de espera sem visibilidade.",
   },
   {
-    icon: Lock,
-    title: "Acesso controlado",
+    icon: BarChart3,
+    title: "Decisões Baseadas em Dados",
     description:
-      "Políticas de senha, permissões e registro de quem acessa o quê — menos risco de vazamento interno.",
-  },
-  {
-    icon: Eye,
-    title: "Monitoramento ativo",
-    description:
-      "Alertas quando site, e-mail ou serviços essenciais apresentam instabilidade, antes do prejuízo operacional.",
+      "GA4 e GTM configurados desde o início para você enxergar leads, origem de tráfego e comportamento real dos visitantes.",
   },
   {
     icon: FileCheck,
-    title: "Contrato claro",
+    title: "Contrato Transparente",
     description:
-      "Escopo, prazos de resposta e canais de atendimento documentados — sem surpresa na fatura ou no suporte.",
+      "Escopo, prazos, investimento e o que está incluso documentados antes de começar — sem surpresa na entrega ou na fatura.",
+  },
+  {
+    icon: Cloud,
+    title: "Infraestrutura de Elite",
+    description:
+      "Ambientes em Google Cloud e Azure com monitoramento, backups e boas práticas de segurança para sustentar seu crescimento digital.",
   },
 ];
 
 export const supportProcess = [
   {
     step: "01",
-    title: "Diagnóstico gratuito",
+    title: "Diagnóstico Inicial",
     description:
-      "Conversa de 15 minutos para mapear riscos, prioridades e o que mais impacta sua operação hoje.",
+      "Conversa de 15 minutos para avaliar site, Google Meu Negócio, analytics e infraestrutura — com prioridades claras para o seu negócio.",
   },
   {
     step: "02",
-    title: "Proposta sob medida",
+    title: "Planejamento & Briefing",
     description:
-      "Plano com escopo, investimento mensal e o que está incluso — você decide com informação, não no escuro.",
+      "Definimos escopo, cronograma, investimento e entregáveis: páginas, SEO local, tags de conversão e requisitos de nuvem.",
   },
   {
     step: "03",
-    title: "Implantação",
+    title: "Desenvolvimento & Setup",
     description:
-      "Configuramos monitoramento, backups e canais de suporte. Você recebe um resumo do que foi feito.",
+      "Construímos o site ou landing, configuramos Google Empresas, GA4/GTM e ambiente em nuvem — com validação em cada marco.",
   },
   {
     step: "04",
-    title: "Suporte contínuo",
+    title: "Monitoramento & Suporte Contínuo",
     description:
-      "Atendimento pelo WhatsApp e e-mail, com registro dos chamados e acompanhamento até a resolução.",
+      "Acompanhamos performance, disponibilidade e evoluções recorrentes com suporte humano via WhatsApp e e-mail.",
   },
 ];
 
 /** Compromissos operacionais — ajuste os valores em content.ts conforme seu contrato real */
 export const serviceCommitments = [
-  { icon: Clock, label: "Primeira resposta", value: "até 4h úteis" },
-  { icon: Eye, label: "Monitoramento", value: "24h" },
-  { icon: ShieldCheck, label: "Backups", value: "diários" },
-  { icon: Headphones, label: "Canal direto", value: "WhatsApp" },
+  { icon: ShieldCheck, label: "Uptime garantido", value: "99.9%" },
+  { icon: Clock, label: "Prazo de entrega", value: "garantido" },
+  { icon: Headphones, label: "Suporte humano", value: "< 30 min" },
+  { icon: Eye, label: "Monitoramento", value: "24/7" },
 ];
 
 export const plans = [
   {
-    name: "Suporte & Manutenção",
+    name: "Sustentação & Evolução",
     price: "350",
     badge: "",
     features: [
-      "Monitoramento 24h de site e e-mail",
-      "Backups diários automáticos",
-      "Suporte via WhatsApp",
-      "Resolução rápida de incidentes",
+      "Monitoramento 24/7 de site, e-mail e cloud",
+      "Manutenção de GA4, GTM e Google Meu Negócio",
+      "Otimizações recorrentes de performance e SEO",
+      "Suporte humano via WhatsApp com SLA ágil",
+      "Gestão inicial em GCP e Azure",
     ],
   },
   {
-    name: "Gestão Especializada",
+    name: "Projetos Corporativos / Custom",
     price: "custom",
     badge: "Mais escolhido",
     features: [
-      "Tudo do plano anterior",
-      "Consultoria mensal personalizada",
-      "Otimização mensal de velocidade",
-      "Blindagem de segurança em GCP e Azure",
-      "Atendimento prioritário",
+      "Site institucional ou landing page do zero",
+      "Migração e setup completo em GCP ou Azure",
+      "Tracking avançado: GA4, GTM e eventos de conversão",
+      "SEO local e configuração do Google Meu Negócio",
+      "Cronograma e escopo sob medida para o seu negócio",
     ],
   },
 ];

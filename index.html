@@ -1,31 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aera Cloud | Suporte de TI para Escritórios e Clínicas</title>
+    <meta
+      name="description"
+      content="Suporte técnico, monitoramento 24h e análise de cloud para advocacia, contabilidade, clínicas e pequenas empresas. Azure, Google Cloud e atendimento humano."
+    />
 
-  <!DOCTYPE html>
-  <html lang="pt-br">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Aera Cloud | Suporte de TI para Escritórios e Clínicas</title>
-      <meta
-        name="description"
-        content="Suporte técnico, monitoramento 24h e análise de cloud para advocacia, contabilidade, clínicas e pequenas empresas. Azure, Google Cloud e atendimento humano."
-      />
-      <meta property="og:title" content="Aera Cloud - Suporte de TI" />
-      <meta
-        property="og:description"
-        content="Suporte técnico, monitoramento 24h e análise de cloud. Azure, Google Cloud e atendimento humano em Brasília e todo o Brasil."
-      />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.aeracloud.com.br/" />
-      <meta property="og:image" content="https://www.aeracloud.com.br/og-image.png" />
-      <meta property="og:locale" content="pt_BR" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="theme-color" content="#020813" />
-      <link rel="icon" type="image/png" href="/favicon.png" />
-    </head>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.aeracloud.com.br/" />
 
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aera Cloud - Suporte de TI" />
+    <meta
+      property="og:description"
+      content="Suporte técnico, monitoramento 24h e análise de cloud. Azure, Google Cloud e atendimento humano em Brasília e todo o Brasil."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.aeracloud.com.br/" />
+    <meta property="og:image" content="https://www.aeracloud.com.br/og-image.png" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Theme & Favicon -->
+    <meta name="theme-color" content="#020813" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- ═══════════════════════════════════════════════════════════
+         Google Analytics 4 (GA4) — ID: G-BZYG5BB4HJ
+         Documentação: https://support.google.com/analytics/answer/9304153
+    ════════════════════════════════════════════════════════════════ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZYG5BB4HJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-BZYG5BB4HJ');
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         Google Tag Manager (GTM) — ID: GTM-TJGM6D29
+         Posição: o mais alto possível no <head>
+         Documentação: https://support.google.com/tagmanager/answer/6103696
+    ════════════════════════════════════════════════════════════════ -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TJGM6D29');
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         Schema Markup — LocalBusiness (JSON-LD)
+         Permite rich results no Google Search e melhora relevância
+         local para buscas em Brasília e regiões próximas.
+         Documentação: https://schema.org/LocalBusiness
+    ════════════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Aera Cloud",
+      "description": "Suporte técnico, monitoramento 24h e análise de cloud para advocacia, contabilidade, clínicas e pequenas empresas. Azure, Google Cloud e atendimento humano.",
+      "url": "https://www.aeracloud.com.br",
+      "telephone": "+55-61-99251-3658",
+      "email": "rafael.brandao@aeracloud.com.br",
+      "image": "https://www.aeracloud.com.br/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brasília",
+        "addressRegion": "DF",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-15.7801",
+        "longitude": "-47.9292"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "sameAs": [
+        "https://wa.me/5561992513658"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de TI e Presença Digital",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sites Profissionais e Landing Pages" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Meu Negócio e SEO Local" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Análise de Dados com GA4 e GTM" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sustentação, Suporte e Cloud (GCP / Azure)" } }
+        ]
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <!-- ═══════════════════════════════════════════════════════════
+         Google Tag Manager (noscript) — ID: GTM-TJGM6D29
+         Obrigatório logo após a abertura do <body>.
+         Garante rastreamento básico mesmo sem JavaScript ativo.
+    ════════════════════════════════════════════════════════════════ -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TJGM6D29"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
