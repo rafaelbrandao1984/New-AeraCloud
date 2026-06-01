@@ -6,7 +6,11 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build:functions": "npm run build --prefix functions",
+    "deploy:backend": "npm run build:functions && firebase deploy --only functions,firestore:rules",
+    "deploy:hosting": "npm run build && firebase deploy --only hosting",
+    "deploy:all": "npm run build && npm run build:functions && firebase deploy --only hosting,functions,firestore:rules"
   },
   "dependencies": {
     "lucide-react": "0.487.0",
@@ -15,6 +19,7 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
+    "firebase-tools": "^14.12.0",
     "@tailwindcss/vite": "4.1.12",
     "@types/react": "18.3.28",
     "@types/react-dom": "18.3.7",

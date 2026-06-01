@@ -1,5 +1,5 @@
 import { Mail, MapPin, MessageCircle } from "lucide-react";
-import { company, email, services, whatsappUrl } from "../content";
+import { company, email, services, whatsappDisplay, whatsappUrl } from "../content";
 
 export function Footer() {
   return (
@@ -50,7 +50,7 @@ export function Footer() {
             <div className="space-y-3 text-sm">
               <p className="flex items-center gap-2 text-gray-400">
                 <MessageCircle className="h-4 w-4" />
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition">(61) 99251-3658</a>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition">{whatsappDisplay}</a>
               </p>
               <p className="flex items-center gap-2 text-gray-400">
                 <Mail className="h-4 w-4" />

@@ -15,7 +15,29 @@ import {
 } from "lucide-react";
 
 export const whatsappUrl = "https://wa.me/5561992513658";
+export const whatsappDisplay = "(61) 99251-3658";
 export const email = "rafael.brandao@aeracloud.com.br";
+
+/** URL da Cloud Function submitLead (região southamerica-east1) */
+export const leadApiUrl =
+  import.meta.env.VITE_LEAD_API_URL ??
+  "https://southamerica-east1-aera-cloud.cloudfunctions.net/submitLead";
+
+export const contactBenefits = [
+  "Diagnóstico inicial gratuito de presença digital e infraestrutura",
+  "Retorno em horário comercial, com prioridade no mesmo dia útil",
+  "Especialistas em Brasília: site, Google Empresas, analytics e cloud",
+  "Escopo e investimento transparentes antes de iniciar o projeto",
+];
+
+export const contactInterestOptions = [
+  "Site institucional ou landing page",
+  "Google Meu Negócio e SEO local",
+  "GA4, GTM e mensuração de conversão",
+  "Sustentação, suporte e cloud (GCP / Azure)",
+  "Projeto corporativo sob medida",
+  "Outro",
+] as const;
 
 /** Dados legais da empresa — aparecem no rodapé e na seção de confiança */
 export const company = {

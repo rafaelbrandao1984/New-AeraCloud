@@ -1,19 +1,23 @@
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { GlowCard } from "./components/GlowCard";
+import { ContactForm } from "./components/ContactForm";
+import { WhatsAppFloat } from "./components/WhatsAppFloat";
 import { motion } from "motion/react";
 import pilaresImage from "../assets/pilares.png";
 import {
   company,
+  contactBenefits,
   email,
   industries,
+  whatsappDisplay,
+  whatsappUrl,
   plans,
   serviceCommitments,
   services,
   supportProcess,
   trustPillars,
   values,
-  whatsappUrl,
 } from "./content";
 
 const diagnosticUrl = `${whatsappUrl}?text=${encodeURIComponent(
@@ -358,30 +362,60 @@ export default function App() {
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-gray-950/40" id="contact">
-        <div className="container mx-auto max-w-4xl text-center">
-          <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Presença digital completa</span>
-          <h2 className="mt-4 text-4xl font-bold tracking-tight">Você não compra apenas um site.</h2>
-          <h2 className="text-4xl font-bold tracking-tight text-emerald-400">
-            Compra visibilidade, dados e estrutura que não param.
-          </h2>
-          <p className="mt-6 text-gray-400 leading-relaxed max-w-2xl mx-auto">
-            Site rápido, Google Empresas otimizado, analytics configurado e nuvem segura — fale conosco pelo WhatsApp ou e-mail. Respondemos em horário comercial.
-          </p>
+      <section className="py-24 px-6 bg-gray-950/40 border-t border-gray-800" id="contact">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="text-center lg:text-left">
+              <span className="text-sm uppercase tracking-[0.35em] text-emerald-400">Diagnóstico inicial gratuito</span>
+              <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                Pronto para crescer com presença digital e infraestrutura segura?
+              </h2>
+              <p className="mt-6 text-gray-400 leading-relaxed">
+                Preencha o formulário — registramos seu contato e abrimos o WhatsApp com a mensagem pronta. Respondemos em horário comercial.
+              </p>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            <GlowCard className="p-10 bg-gray-900/80 border-gray-800">
-              <p className="text-sm uppercase tracking-[0.35em] text-emerald-400">Email profissional</p>
-              <a href={`mailto:${email}`} className="mt-4 block break-all text-lg font-semibold transition hover:text-emerald-400 sm:text-xl">{email}</a>
-            </GlowCard>
-            <GlowCard className="p-10 bg-gray-900/80 border-gray-800">
-              <p className="text-sm uppercase tracking-[0.35em] text-emerald-400">WhatsApp</p>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-4 block text-xl font-semibold transition hover:text-emerald-400">(61) 99251-3658</a>
-            </GlowCard>
+              <ul className="mt-8 space-y-3 text-left text-sm text-gray-300">
+                {contactBenefits.map((benefit) => (
+                  <li key={benefit} className="flex gap-3">
+                    <span className="text-emerald-400 shrink-0" aria-hidden="true">
+                      ✓
+                    </span>
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-10 space-y-4 text-sm text-gray-400">
+                <p>
+                  <span className="text-gray-500">Prefere falar direto?</span>
+                  <br />
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 inline-block font-semibold text-emerald-400 transition hover:text-emerald-300"
+                  >
+                    {whatsappDisplay} · WhatsApp
+                  </a>
+                </p>
+                <p>
+                  <span className="text-gray-500">E-mail:</span>{" "}
+                  <a href={`mailto:${email}`} className="break-all text-emerald-400 transition hover:text-emerald-300">
+                    {email}
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-gray-800 bg-gray-900/80 p-8 shadow-xl">
+              <h3 className="mb-6 text-lg font-bold text-white">Solicite seu diagnóstico inicial</h3>
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>
 
+      <WhatsAppFloat />
       <Footer />
     </div>
   );

@@ -1,7 +1,7 @@
 import { ArrowLeft, ShieldCheck } from "lucide-react";
 import { company, email } from "../content";
 
-const lastUpdated = "26 de maio de 2026";
+const lastUpdated = "1 de junho de 2026";
 
 export function PrivacyPolicy() {
   return (
@@ -68,21 +68,37 @@ export function PrivacyPolicy() {
               2. Quais dados coletamos
             </h2>
             <p>
-              Não coletamos dados pessoais de forma ativa (como nome, CPF ou e-mail) por meio de
-              formulários neste site. As informações coletadas são de natureza <strong className="text-white">analítica e de comportamento de navegação</strong>,
-              obtidas de forma automática pelas ferramentas listadas abaixo:
+              Coletamos dados de duas formas principais:
             </p>
-            <ul className="mt-4 space-y-2 list-disc list-inside">
+            <h3 className="mt-4 font-semibold text-white">2.1 Dados fornecidos por você (formulário de contato)</h3>
+            <p className="mt-2">
+              Ao solicitar diagnóstico ou proposta pelo formulário do site, podemos registrar:
+            </p>
+            <ul className="mt-3 space-y-2 list-disc list-inside">
+              <li>Nome</li>
+              <li>Telefone / WhatsApp</li>
+              <li>Serviço de interesse e resumo da necessidade (quando informados)</li>
+              <li>Data e hora do envio, página de origem e dados técnicos básicos da sessão (navegador, referência)</li>
+            </ul>
+            <p className="mt-3">
+              Esses dados são armazenados de forma segura em infraestrutura Google Cloud (Firebase)
+              e utilizados exclusivamente para retorno comercial e proposta de serviços.
+            </p>
+            <h3 className="mt-6 font-semibold text-white">2.2 Dados analíticos (navegação)</h3>
+            <p className="mt-2">
+              Também coletamos informações de natureza <strong className="text-white">analítica e de comportamento de navegação</strong>,
+              obtidas de forma automática pelas ferramentas listadas na seção 3:
+            </p>
+            <ul className="mt-3 space-y-2 list-disc list-inside">
               <li>Páginas visitadas e tempo de permanência</li>
               <li>Origem do tráfego (busca orgânica, anúncios, redes sociais, acesso direto)</li>
               <li>Tipo de dispositivo, sistema operacional e navegador</li>
               <li>Localização geográfica aproximada (cidade/região, sem geolocalização precisa)</li>
-              <li>Eventos de interação: cliques em botões de contato, scroll e navegação entre seções</li>
+              <li>Eventos de interação: envio de formulário, cliques em contato e navegação entre seções</li>
             </ul>
             <p className="mt-4">
-              Caso você nos envie uma mensagem via WhatsApp ou e-mail, os dados fornecidos por você
-              (nome e informações de contato) serão utilizados exclusivamente para responder à sua
-              solicitação e não serão compartilhados com terceiros sem o seu consentimento.
+              Se você também nos contatar via WhatsApp ou e-mail, os dados informados nesses canais
+              serão tratados com a mesma finalidade e não serão compartilhados com terceiros sem o seu consentimento.
             </p>
           </section>
 
@@ -147,6 +163,7 @@ export function PrivacyPolicy() {
             </h2>
             <p>Os dados coletados são utilizados exclusivamente para:</p>
             <ul className="mt-4 space-y-2 list-disc list-inside">
+              <li>Responder solicitações de diagnóstico e propostas comerciais</li>
               <li>Mensurar o desempenho do site e das campanhas de marketing</li>
               <li>Entender o comportamento dos visitantes para melhorar a experiência de uso</li>
               <li>Identificar as páginas e seções de maior interesse</li>
@@ -164,6 +181,11 @@ export function PrivacyPolicy() {
               5. Base legal (LGPD)
             </h2>
             <p>
+              O tratamento dos dados do formulário de contato ocorre com base no{" "}
+              <strong className="text-white">consentimento</strong> (Art. 7º, I, LGPD), manifestado ao
+              enviar o formulário e aceitar ser contatado para proposta comercial.
+            </p>
+            <p className="mt-3">
               O tratamento dos dados analíticos ocorre com base no{" "}
               <strong className="text-white">legítimo interesse</strong> (Art. 7º, IX, LGPD) da empresa
               em compreender o uso do site e aprimorar os serviços oferecidos, de forma que não
@@ -204,9 +226,10 @@ export function PrivacyPolicy() {
             <p>
               Os dados analíticos são retidos pelo Google Analytics pelo período de{" "}
               <strong className="text-white">14 meses</strong> por padrão, conforme as configurações da
-              propriedade GA4. Dados de contato fornecidos diretamente por você (via WhatsApp ou
-              e-mail) são mantidos enquanto houver relacionamento comercial ativo e eliminados
-              mediante solicitação.
+              propriedade GA4. Dados de contato enviados pelo formulário, WhatsApp ou e-mail são
+              mantidos enquanto houver relacionamento comercial ativo ou necessidade de registro
+              (até <strong className="text-white">24 meses</strong> após o último contato, salvo obrigação legal)
+              e eliminados mediante solicitação do titular.
             </p>
           </section>
 
