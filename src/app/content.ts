@@ -13,7 +13,7 @@ export const whatsappDisplay = "(61) 99251-3658";
 export const email = "contato@aeracloud.com.br";
 
 export const socialLinks = {
-  instagram: "https://instagram.com/aeracloud",
+  instagram: "https://www.instagram.com/aera_cloud/",
   linkedin: "https://linkedin.com/company/aeracloud",
 };
 

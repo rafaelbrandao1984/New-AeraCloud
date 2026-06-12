@@ -4,7 +4,7 @@ import { GlowCard } from "./components/GlowCard";
 import { ContactForm } from "./components/ContactForm";
 import { WhatsAppFloat } from "./components/WhatsAppFloat";
 import { motion } from "motion/react";
-import { Cloud, ShieldCheck } from "lucide-react";
+import heroCloud from "../assets/hero-cloud.png";
 import {
   caseStudies,
   company,
@@ -64,23 +64,22 @@ export default function App() {
           </motion.div>
 
           <motion.div
-            className="relative"
+            className="relative flex flex-col items-center"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <GlowCard className="overflow-hidden border border-gray-800 p-12">
-              <div className="relative flex aspect-square items-center justify-center">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-500/20 via-cyan-500/10 to-transparent blur-2xl" />
-                <Cloud className="relative h-32 w-32 text-emerald-400/80" aria-hidden="true" />
-                <div className="absolute bottom-8 right-8 flex h-20 w-20 items-center justify-center rounded-2xl border border-emerald-500/40 bg-emerald-500/10 shadow-[0_0_30px_rgba(16,185,129,0.25)]">
-                  <ShieldCheck className="h-10 w-10 text-emerald-400" aria-hidden="true" />
-                </div>
-              </div>
-              <p className="mt-6 text-center text-sm text-gray-400">
+            <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-tr from-emerald-500/10 via-cyan-500/5 to-transparent blur-3xl" />
+            <div className="relative overflow-hidden rounded-3xl border border-gray-800 bg-gray-950/40 p-4 backdrop-blur-sm shadow-2xl transition-all duration-300 hover:border-emerald-500/30">
+              <img
+                src={heroCloud}
+                alt="Visualização de Infraestrutura em Nuvem da Aera Cloud"
+                className="w-full h-auto max-w-[480px] rounded-2xl object-cover shadow-[0_0_50px_rgba(16,185,129,0.1)]"
+              />
+              <p className="mt-4 text-center text-sm text-gray-400 px-4">
                 Servidores monitorados, backups automáticos e segurança proativa em GCP e Azure.
               </p>
-            </GlowCard>
+            </div>
           </motion.div>
         </div>
       </section>

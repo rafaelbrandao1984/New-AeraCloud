@@ -69,7 +69,7 @@ export function Footer() {
                   className="inline-flex items-center gap-2 hover:text-emerald-400 transition"
                 >
                   <Instagram className="h-4 w-4" />
-                  @aeracloud
+                  @aera_cloud
                 </a>
               </li>
               <li>
