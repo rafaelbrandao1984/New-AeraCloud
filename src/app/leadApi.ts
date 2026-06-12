@@ -11,7 +11,7 @@ export type LeadPayload = {
 
 export function buildWhatsAppLeadMessage(data: LeadPayload): string {
   return [
-    "Olá! Gostaria de solicitar um diagnóstico de presença digital e infraestrutura.",
+    "Olá! Gostaria de agendar meu diagnóstico gratuito de infraestrutura (30 min).",
     "",
     `Nome: ${data.nome}`,
     `Telefone: ${data.telefone}`,

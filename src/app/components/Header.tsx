@@ -5,11 +5,17 @@ import logoAera from "../../assets/logo.png";
 
 const navItems = [
   { label: "Home", href: "#home" },
-  { label: "Serviços", href: "#services" },
-  { label: "Como funciona", href: "#process" },
+  { label: "O problema", href: "#problem" },
+  { label: "Solução", href: "#solution" },
+  { label: "Diferenciais", href: "#differentiators" },
+  { label: "Casos", href: "#cases" },
   { label: "Planos", href: "#pricing" },
   { label: "Contato", href: "#contact" },
 ];
+
+const diagnosticUrl = `${whatsappUrl}?text=${encodeURIComponent(
+  "Olá! Quero agendar meu diagnóstico gratuito de infraestrutura (30 min).",
+)}`;
 
 export function Header() {
   return (
@@ -39,13 +45,13 @@ export function Header() {
               Aera<span className="text-emerald-400">Cloud</span>
             </p>
             <p className="mt-1.5 hidden text-[10px] font-medium uppercase tracking-[0.15em] text-slate-400 sm:block">
-              Suporte de TI
+              Infraestrutura & Cloud
             </p>
           </div>
         </motion.a>
 
         <div className="flex items-center gap-3 md:gap-6">
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-400">
+          <nav className="hidden lg:flex items-center gap-5 text-sm font-medium text-gray-400">
             {navItems.map((item) => (
               <a key={item.href} href={item.href} className="transition-colors hover:text-emerald-400">
                 {item.label}
@@ -54,14 +60,14 @@ export function Header() {
           </nav>
 
           <a
-            href={whatsappUrl}
+            href={diagnosticUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-3 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400 sm:px-5"
           >
             <Send className="h-4 w-4" />
-            <span className="hidden sm:inline">Falar com especialista</span>
-            <span className="sr-only sm:hidden">Falar com especialista</span>
+            <span className="hidden sm:inline">Diagnóstico Grátis</span>
+            <span className="sr-only sm:hidden">Diagnóstico Grátis</span>
           </a>
         </div>
       </div>

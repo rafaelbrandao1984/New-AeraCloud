@@ -154,7 +154,7 @@ export function ContactForm() {
           value={form.mensagem}
           onChange={update("mensagem")}
           className={`${inputClass} resize-none`}
-          placeholder="Ex.: preciso de um site rápido e aparecer no Google na minha região."
+          placeholder="Ex.: servidor cai com frequência e preciso de backup e monitoramento."
         />
       </div>
 
@@ -182,7 +182,7 @@ export function ContactForm() {
         className="w-full rounded-xl bg-emerald-500 py-4 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400 disabled:cursor-not-allowed disabled:opacity-60"
         data-track-event="submit_lead_form_home"
       >
-        {status === "submitting" ? "Enviando..." : "Enviar e abrir WhatsApp →"}
+        {status === "submitting" ? "Enviando..." : "Agendar Diagnóstico →"}
       </button>
     </form>
   );
